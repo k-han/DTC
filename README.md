@@ -30,10 +30,16 @@ By default, we put the data in `./data/datasets/` (soft link is suggested). You 
 - For CIFAR-10, CIFAR-100, and SVHN, simply download the datasets and put into `./data/datasets/`.
 - For OmniGlot, after downloading, you need to put `Alphabet_of_the_Magi, Japanese_(katakana), Latin, Cyrillic, Grantha` from  `imags_background` folder into `images_background_val` folder, and put the rest alphabets into `images_background_train` folder.
 - For ImageNet, we provide the exact split files used in the experiment following existing work. To download the split files, run the command:
-
-```shell
+``shell
 sh scripts/download_imagenet_splits.sh
-```
+``
+. The ImageNet dataset folder is organized in the following way:
+
+    ```
+    ImageNet/imagenet_rand118 #downloaded by the above command
+    ImageNet/images/train #standard ImageNet training split
+    ImageNet/images/val #standard ImageNet validation split
+    ```
 
 ## Pretrained models
 
@@ -142,7 +148,7 @@ If this work is helpful for your research, please cite our paper.
 author    = {Kai Han and Andrea Vedaldi and Andrew Zisserman},
 title     = {Learning to Discover Novel Visual Categories via Deep Transfer Clustering},
 booktitle = {International Conference on Computer Vision (ICCV)},
-date      = {2019}
+year      = {2019}
 }
 ```
 
